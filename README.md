@@ -1,0 +1,2 @@
+# RBFN-MountainCar
+An agent designed with the Radial Basis Function Network (RBFN), to play the Mountain Car environment of the OpenAIGym, maximum steps per episode changed to 4000, as maximum of 200 was making learning quite difficult. The Agent contains 3 Scikit-Learn's SGD Regressors, 1 for each of the possible actions, and through Q-Learning algorithm, action values are updated with each partial_fit of the current return for the previous action.
