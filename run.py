@@ -8,7 +8,7 @@ def run(env, agent, epsilon, gamma):
 		action = agent.sample_action(state, epsilon)
 		state_prime, reward, done, info = env.step(action)
 		actions_prime = agent.predict(state_prime)
-		Q = reward + (gamma * np.max(actions_prime[0]))
+		Q = reward + gamma * np.max(actions_prime)
 		agent.update(state, action, Q)
 		iters += 1
 		total_reward += reward
